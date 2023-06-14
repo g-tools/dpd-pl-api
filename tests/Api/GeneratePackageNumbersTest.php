@@ -1,12 +1,12 @@
 <?php
 
-namespace T3ko\DpdTests\Api;
+namespace GTools\DpdTests\Api;
 
-use T3ko\Dpd\Objects\Package;
-use T3ko\Dpd\Objects\Parcel;
-use T3ko\Dpd\Objects\Receiver;
-use T3ko\Dpd\Objects\Sender;
-use T3ko\Dpd\Request\GeneratePackageNumbersRequest;
+use GTools\Dpd\Objects\Package;
+use GTools\Dpd\Objects\Parcel;
+use GTools\Dpd\Objects\Receiver;
+use GTools\Dpd\Objects\Sender;
+use GTools\Dpd\Request\GeneratePackageNumbersRequest;
 
 class GeneratePackageNumbersTest extends ApiIntegrationTestCase
 {
@@ -27,7 +27,7 @@ class GeneratePackageNumbersTest extends ApiIntegrationTestCase
         self::assertIsArray($result->getPackages());
         self::assertNotEmpty($result->getPackages());
 
-        /** @var \T3ko\Dpd\Objects\RegisteredPackage */
+        /** @var \GTools\Dpd\Objects\RegisteredPackage */
         $registeredPackage = $result->getPackages()[0];
 
         self::assertEquals('OK', $registeredPackage->getStatus());
@@ -36,7 +36,7 @@ class GeneratePackageNumbersTest extends ApiIntegrationTestCase
         self::assertIsArray($registeredPackage->getParcels());
         self::assertNotEmpty($registeredPackage->getParcels());
 
-        /** @var \T3ko\Dpd\Objects\RegisteredParcel */
+        /** @var \GTools\Dpd\Objects\RegisteredParcel */
         $registeredParcel = $registeredPackage->getParcels()[0];
 
         self::assertEquals('OK', $registeredParcel->getStatus());

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace T3ko\DpdTests\Objects;
+namespace GTools\DpdTests\Objects;
 
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Objects\Receiver;
+use GTools\Dpd\Objects\Receiver;
 
 class ReceiverTest extends TestCase
 {

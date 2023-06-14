@@ -1,9 +1,9 @@
 <?php
 
-namespace T3ko\DpdTests\Request;
+namespace GTools\DpdTests\Request;
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Request\GetCourierAvailabilityRequest;
+use GTools\Dpd\Request\GetCourierAvailabilityRequest;
 
 class GetCourierAvailabilityRequestTest extends TestCase
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace T3ko\Dpd\Request\Serializer;
+namespace GTools\Dpd\Request\Serializer;
 
 use Sabre\Xml\Service;
 use Sabre\Xml\Writer;
-use T3ko\Dpd\Objects\Package;
-use T3ko\Dpd\Objects\Parcel;
-use T3ko\Dpd\Objects\Receiver;
-use T3ko\Dpd\Objects\Sender;
-use T3ko\Dpd\Objects\Services;
+use GTools\Dpd\Objects\Package;
+use GTools\Dpd\Objects\Parcel;
+use GTools\Dpd\Objects\Receiver;
+use GTools\Dpd\Objects\Sender;
+use GTools\Dpd\Objects\Services;
 
 class XmlPackagesSerializer
 {
@@ -21,11 +21,11 @@ class XmlPackagesSerializer
     public function __construct()
     {
         $this->xmlEngine = new Service();
-        $this->xmlEngine->classMap['T3ko\Dpd\Objects\Package'] = [$this, 'mapPackage'];
-        $this->xmlEngine->classMap['T3ko\Dpd\Objects\Sender'] = [$this, 'mapAddress'];
-        $this->xmlEngine->classMap['T3ko\Dpd\Objects\Receiver'] = [$this, 'mapAddress'];
-        $this->xmlEngine->classMap['T3ko\Dpd\Objects\Parcel'] = [$this, 'mapParcel'];
-        $this->xmlEngine->classMap['T3ko\Dpd\Objects\Services'] = [$this, 'mapServices'];
+        $this->xmlEngine->classMap['GTools\Dpd\Objects\Package'] = [$this, 'mapPackage'];
+        $this->xmlEngine->classMap['GTools\Dpd\Objects\Sender'] = [$this, 'mapAddress'];
+        $this->xmlEngine->classMap['GTools\Dpd\Objects\Receiver'] = [$this, 'mapAddress'];
+        $this->xmlEngine->classMap['GTools\Dpd\Objects\Parcel'] = [$this, 'mapParcel'];
+        $this->xmlEngine->classMap['GTools\Dpd\Objects\Services'] = [$this, 'mapServices'];
     }
 
     public function serialize(array $packages): string

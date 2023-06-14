@@ -1,18 +1,18 @@
 <?php
 
 
-namespace T3ko\DpdTests\Objects;
+namespace GTools\DpdTests\Objects;
 
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Objects\Enum\Currency;
-use T3ko\Dpd\Objects\Enum\GuaranteeType;
-use T3ko\Dpd\Objects\Enum\PayerType;
-use T3ko\Dpd\Objects\Enum\SelfCollectionReceiver;
-use T3ko\Dpd\Objects\Package;
-use T3ko\Dpd\Objects\Parcel;
-use T3ko\Dpd\Objects\Receiver;
-use T3ko\Dpd\Objects\Sender;
+use GTools\Dpd\Objects\Enum\Currency;
+use GTools\Dpd\Objects\Enum\GuaranteeType;
+use GTools\Dpd\Objects\Enum\PayerType;
+use GTools\Dpd\Objects\Enum\SelfCollectionReceiver;
+use GTools\Dpd\Objects\Package;
+use GTools\Dpd\Objects\Parcel;
+use GTools\Dpd\Objects\Receiver;
+use GTools\Dpd\Objects\Sender;
 
 class PackageTest extends TestCase
 {

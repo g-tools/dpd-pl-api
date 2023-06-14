@@ -1,20 +1,20 @@
 <?php
 
-namespace T3ko\Dpd\Request;
+namespace GTools\Dpd\Request;
 
-use T3ko\Dpd\Objects\Enum\FileType;
-use T3ko\Dpd\Objects\Enum\LabelPrintingPolicy;
-use T3ko\Dpd\Objects\Enum\PageSize;
-use T3ko\Dpd\Objects\Enum\SessionType;
-use T3ko\Dpd\Soap\Types\DpdServicesParamsV1;
-use T3ko\Dpd\Soap\Types\GenerateSpedLabelsV1Request;
-use T3ko\Dpd\Soap\Types\OutputDocFormatDSPEnumV1;
-use T3ko\Dpd\Soap\Types\OutputDocPageFormatDSPEnumV1;
-use T3ko\Dpd\Soap\Types\PackageDSPV1;
-use T3ko\Dpd\Soap\Types\ParcelDSPV1;
-use T3ko\Dpd\Soap\Types\PolicyDSPEnumV1;
-use T3ko\Dpd\Soap\Types\SessionDSPV1;
-use T3ko\Dpd\Soap\Types\SessionTypeDSPEnumV1;
+use GTools\Dpd\Objects\Enum\FileType;
+use GTools\Dpd\Objects\Enum\LabelPrintingPolicy;
+use GTools\Dpd\Objects\Enum\PageSize;
+use GTools\Dpd\Objects\Enum\SessionType;
+use GTools\Dpd\Soap\Types\DpdServicesParamsV1;
+use GTools\Dpd\Soap\Types\GenerateSpedLabelsV1Request;
+use GTools\Dpd\Soap\Types\OutputDocFormatDSPEnumV1;
+use GTools\Dpd\Soap\Types\OutputDocPageFormatDSPEnumV1;
+use GTools\Dpd\Soap\Types\PackageDSPV1;
+use GTools\Dpd\Soap\Types\ParcelDSPV1;
+use GTools\Dpd\Soap\Types\PolicyDSPEnumV1;
+use GTools\Dpd\Soap\Types\SessionDSPV1;
+use GTools\Dpd\Soap\Types\SessionTypeDSPEnumV1;
 
 class GenerateLabelsRequest
 {

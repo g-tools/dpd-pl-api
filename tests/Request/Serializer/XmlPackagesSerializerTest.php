@@ -1,15 +1,15 @@
 <?php
 
-namespace T3ko\DpdTests\Request\Serializer;
+namespace GTools\DpdTests\Request\Serializer;
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Objects\Package;
-use T3ko\Dpd\Objects\Parcel;
-use T3ko\Dpd\Objects\Receiver;
-use T3ko\Dpd\Objects\Sender;
+use GTools\Dpd\Objects\Package;
+use GTools\Dpd\Objects\Parcel;
+use GTools\Dpd\Objects\Receiver;
+use GTools\Dpd\Objects\Sender;
 use PHPUnit\Xpath\Assert as XpathAssertions;
 use PHPUnit\Xpath\Constraint as XpathConstraints;
-use T3ko\Dpd\Request\Serializer\XmlPackagesSerializer;
+use GTools\Dpd\Request\Serializer\XmlPackagesSerializer;
 
 class XmlPackagesSerializerTest extends TestCase
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace T3ko\Dpd\Response;
+namespace GTools\Dpd\Response;
 
-use T3ko\Dpd\Soap\Types\GenerateSpedLabelsV1Response;
+use GTools\Dpd\Soap\Types\GenerateSpedLabelsV1Response;
 
 class GenerateLabelsResponse
 {

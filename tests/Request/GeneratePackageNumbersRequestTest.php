@@ -1,33 +1,33 @@
 <?php
 
-namespace T3ko\DpdTests\Request;
+namespace GTools\DpdTests\Request;
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Objects\Enum\Currency;
-use T3ko\Dpd\Objects\Enum\GuaranteeType;
-use T3ko\Dpd\Objects\Enum\PayerType;
-use T3ko\Dpd\Objects\Enum\SelfCollectionReceiver;
-use T3ko\Dpd\Objects\Package;
-use T3ko\Dpd\Objects\Parcel;
-use T3ko\Dpd\Objects\Receiver;
-use T3ko\Dpd\Objects\Sender;
-use T3ko\Dpd\Request\GeneratePackageNumbersRequest;
-use T3ko\Dpd\Soap\Types\ServiceCarryInOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServiceCODOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServiceCUDOpenUMLeFV1;
-use T3ko\Dpd\Soap\Types\ServiceDeclaredValueOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServiceDedicatedDeliveryOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServiceDpdPickupOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServiceDutyOpenUMLeFV2;
-use T3ko\Dpd\Soap\Types\ServiceFlagOpenUMLF;
-use T3ko\Dpd\Soap\Types\ServiceGuaranteeOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServiceInPersOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServicePalletOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServicePrivPersOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServiceRODOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServiceSelfColOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServiceTiresExportOpenUMLFeV1;
-use T3ko\Dpd\Soap\Types\ServiceTiresOpenUMLFeV1;
+use GTools\Dpd\Objects\Enum\Currency;
+use GTools\Dpd\Objects\Enum\GuaranteeType;
+use GTools\Dpd\Objects\Enum\PayerType;
+use GTools\Dpd\Objects\Enum\SelfCollectionReceiver;
+use GTools\Dpd\Objects\Package;
+use GTools\Dpd\Objects\Parcel;
+use GTools\Dpd\Objects\Receiver;
+use GTools\Dpd\Objects\Sender;
+use GTools\Dpd\Request\GeneratePackageNumbersRequest;
+use GTools\Dpd\Soap\Types\ServiceCarryInOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServiceCODOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServiceCUDOpenUMLeFV1;
+use GTools\Dpd\Soap\Types\ServiceDeclaredValueOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServiceDedicatedDeliveryOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServiceDpdPickupOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServiceDutyOpenUMLeFV2;
+use GTools\Dpd\Soap\Types\ServiceFlagOpenUMLF;
+use GTools\Dpd\Soap\Types\ServiceGuaranteeOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServiceInPersOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServicePalletOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServicePrivPersOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServiceRODOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServiceSelfColOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServiceTiresExportOpenUMLFeV1;
+use GTools\Dpd\Soap\Types\ServiceTiresOpenUMLFeV1;
 
 class GeneratePackageNumbersRequestTest extends TestCase
 {

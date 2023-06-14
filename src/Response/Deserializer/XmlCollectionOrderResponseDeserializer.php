@@ -1,13 +1,13 @@
 <?php
 
 
-namespace T3ko\Dpd\Response\Deserializer;
+namespace GTools\Dpd\Response\Deserializer;
 
 
 use Sabre\Xml\Reader;
 use Sabre\Xml\Service;
-use T3ko\Dpd\Objects\CollectionOrderedPackage;
-use T3ko\Dpd\Objects\CollectionOrderedParcel;
+use GTools\Dpd\Objects\CollectionOrderedPackage;
+use GTools\Dpd\Objects\CollectionOrderedParcel;
 
 class XmlCollectionOrderResponseDeserializer
 {

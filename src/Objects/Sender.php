@@ -1,6 +1,6 @@
 <?php
 
-namespace T3ko\Dpd\Objects;
+namespace GTools\Dpd\Objects;
 
 class Sender extends Receiver
 {

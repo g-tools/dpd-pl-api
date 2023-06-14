@@ -1,6 +1,6 @@
 <?php
 
-namespace T3ko\Dpd\Exception;
+namespace GTools\Dpd\Exception;
 
 class ObjectException extends \Exception
 {

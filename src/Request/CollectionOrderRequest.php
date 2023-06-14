@@ -1,10 +1,10 @@
 <?php
 
-namespace T3ko\Dpd\Request;
+namespace GTools\Dpd\Request;
 
-use T3ko\Dpd\Objects\Package;
-use T3ko\Dpd\Request\Serializer\XmlPackagesSerializer;
-use T3ko\Dpd\Soap\Types\ImportPackagesXV1Request;
+use GTools\Dpd\Objects\Package;
+use GTools\Dpd\Request\Serializer\XmlPackagesSerializer;
+use GTools\Dpd\Soap\Types\ImportPackagesXV1Request;
 
 class CollectionOrderRequest
 {

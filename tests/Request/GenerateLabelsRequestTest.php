@@ -1,13 +1,13 @@
 <?php
 
-namespace T3ko\DpdTests\Request;
+namespace GTools\DpdTests\Request;
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Objects\Enum\FileType;
-use T3ko\Dpd\Objects\Enum\LabelPrintingPolicy;
-use T3ko\Dpd\Objects\Enum\PageSize;
-use T3ko\Dpd\Objects\Enum\SessionType;
-use T3ko\Dpd\Request\GenerateLabelsRequest;
+use GTools\Dpd\Objects\Enum\FileType;
+use GTools\Dpd\Objects\Enum\LabelPrintingPolicy;
+use GTools\Dpd\Objects\Enum\PageSize;
+use GTools\Dpd\Objects\Enum\SessionType;
+use GTools\Dpd\Request\GenerateLabelsRequest;
 
 class GenerateLabelsRequestTest extends TestCase
 {

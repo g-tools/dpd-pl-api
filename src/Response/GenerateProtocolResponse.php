@@ -1,8 +1,8 @@
 <?php
 
-namespace T3ko\Dpd\Response;
+namespace GTools\Dpd\Response;
 
-use T3ko\Dpd\Soap\Types\GenerateProtocolV2Response;
+use GTools\Dpd\Soap\Types\GenerateProtocolV2Response;
 
 class GenerateProtocolResponse
 {

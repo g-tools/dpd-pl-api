@@ -1,12 +1,12 @@
 <?php
 
-namespace T3ko\Dpd\Request;
+namespace GTools\Dpd\Request;
 
-use T3ko\Dpd\Objects\Enum\TrackingEventsCount;
-use T3ko\Dpd\Soap\Types\EventsSelectTypeEnum;
-use T3ko\Dpd\Soap\Types\FindPostalCodeV1Request;
-use T3ko\Dpd\Soap\Types\GetEventsForWaybillV1Request;
-use T3ko\Dpd\Soap\Types\PostalCodeV1;
+use GTools\Dpd\Objects\Enum\TrackingEventsCount;
+use GTools\Dpd\Soap\Types\EventsSelectTypeEnum;
+use GTools\Dpd\Soap\Types\FindPostalCodeV1Request;
+use GTools\Dpd\Soap\Types\GetEventsForWaybillV1Request;
+use GTools\Dpd\Soap\Types\PostalCodeV1;
 
 class GetParcelTrackingRequest
 {

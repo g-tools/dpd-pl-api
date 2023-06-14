@@ -1,14 +1,14 @@
 <?php
 
-namespace T3ko\Dpd\Soap\Client;
+namespace GTools\Dpd\Soap\Client;
 
 use Phpro\SoapClient\Client;
-use T3ko\Dpd\Soap\Types\GetEventsForCustomerV4Request;
-use T3ko\Dpd\Soap\Types\GetEventsForCustomerV4Response;
-use T3ko\Dpd\Soap\Types\GetEventsForWaybillV1Request;
-use T3ko\Dpd\Soap\Types\GetEventsForWaybillV1Response;
-use T3ko\Dpd\Soap\Types\MarkEventsAsProcessedV1Request;
-use T3ko\Dpd\Soap\Types\MarkEventsAsProcessedV1Response;
+use GTools\Dpd\Soap\Types\GetEventsForCustomerV4Request;
+use GTools\Dpd\Soap\Types\GetEventsForCustomerV4Response;
+use GTools\Dpd\Soap\Types\GetEventsForWaybillV1Request;
+use GTools\Dpd\Soap\Types\GetEventsForWaybillV1Response;
+use GTools\Dpd\Soap\Types\MarkEventsAsProcessedV1Request;
+use GTools\Dpd\Soap\Types\MarkEventsAsProcessedV1Response;
 
 class InfoServicesClient extends Client
 {

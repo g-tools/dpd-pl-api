@@ -1,5 +1,5 @@
 <?php
-namespace T3ko\Dpd\StringHelper;
+namespace GTools\Dpd\StringHelper;
 
 
 class StringHelper

@@ -1,10 +1,10 @@
 <?php
 
-namespace T3ko\Dpd\Objects;
+namespace GTools\Dpd\Objects;
 
-use T3ko\Dpd\Objects\Enum\Currency;
-use T3ko\Dpd\Objects\Enum\GuaranteeType;
-use T3ko\Dpd\Objects\Enum\SelfCollectionReceiver;
+use GTools\Dpd\Objects\Enum\Currency;
+use GTools\Dpd\Objects\Enum\GuaranteeType;
+use GTools\Dpd\Objects\Enum\SelfCollectionReceiver;
 
 class Services
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace T3ko\Dpd\Objects\Enum;
+namespace GTools\Dpd\Objects\Enum;
 
 final class PayerType
 {

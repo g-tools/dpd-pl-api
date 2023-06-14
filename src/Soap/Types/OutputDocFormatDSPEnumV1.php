@@ -1,7 +1,7 @@
 <?php
 
 
-namespace T3ko\Dpd\Soap\Types;
+namespace GTools\Dpd\Soap\Types;
 
 
 class OutputDocFormatDSPEnumV1 extends DefaultStringEnum

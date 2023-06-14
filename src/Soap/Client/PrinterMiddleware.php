@@ -1,6 +1,6 @@
 <?php
 
-namespace T3ko\Dpd\Soap\Client;
+namespace GTools\Dpd\Soap\Client;
 
 use Http\Promise\Promise;
 use Phpro\SoapClient\Middleware\Middleware;

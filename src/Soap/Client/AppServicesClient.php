@@ -1,10 +1,10 @@
 <?php
 
-namespace T3ko\Dpd\Soap\Client;
+namespace GTools\Dpd\Soap\Client;
 
 use Phpro\SoapClient\Client;
-use T3ko\Dpd\Soap\Types\ImportPackagesXV1Request;
-use T3ko\Dpd\Soap\Types\ImportPackagesXV1Response;
+use GTools\Dpd\Soap\Types\ImportPackagesXV1Request;
+use GTools\Dpd\Soap\Types\ImportPackagesXV1Response;
 
 class AppServicesClient extends Client
 {

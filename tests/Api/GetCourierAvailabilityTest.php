@@ -1,8 +1,8 @@
 <?php
 
-namespace T3ko\DpdTests\Api;
+namespace GTools\DpdTests\Api;
 
-use T3ko\Dpd\Request\GetCourierAvailabilityRequest;
+use GTools\Dpd\Request\GetCourierAvailabilityRequest;
 
 class GetCourierAvailabilityTest extends ApiIntegrationTestCase
 {

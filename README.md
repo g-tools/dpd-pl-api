@@ -11,13 +11,13 @@ Poprzez plik `composer.json`:
 ```json
 {
     "require": {
-        "t3ko/dpd-pl-api-php": "^0"
+        "GTools/dpd-pl-api-php": "^0"
     }
 }
 ```
 lub z linii poleceń:
 ```bash
-composer require t3ko/dpd-pl-api-php
+composer require GTools/dpd-pl-api-php
 ```
 
 Biblioteka korzysta z `httplug` jako abstrakcji klienta HTTP i nie zawiera żadnej domyślnej implementacji. 
@@ -28,14 +28,14 @@ Jeśli Twój projekt zawiera już jakiegoś klienta HTTP wspieranego przez `http
 
 Np. dla `curl`:
 ```bash
-composer require php-http/curl-client:^1 t3ko/dpd-pl-api-php
+composer require php-http/curl-client:^1 GTools/dpd-pl-api-php
 ```
 
 Jeśli natomiast nie używasz jeszcze żadnego kompatybilnego klienta HTTP w swoim kodzie, będzie konieczne zainstalowanie go razem z adapterem.
 
 Np. `guzzle`:
 ```bash
-composer require php-http/guzzle6-adapter:^1 guzzlehttp/guzzle:~6.0 t3ko/dpd-pl-api-php
+composer require php-http/guzzle6-adapter:^1 guzzlehttp/guzzle:~6.0 GTools/dpd-pl-api-php
 ```
 
 ## Użycie
@@ -78,7 +78,7 @@ Aby rozpocząć korzystanie z API wymagane są dane autentykacyjne składające 
 Dane te uzyskuje się od swojego opiekuna klienta po podpisaniu umowy i zadeklarowaniu chęci korzystania z API.
 Te same dane służą do autoryzacji we wszystkich trzech webserwisach wymienionych na początku tego dokumentu.
 
-Korzystanie z API odbywa się poprzez obiekt klasy `T3ko\Dpd\Api` budowany jak poniżej:
+Korzystanie z API odbywa się poprzez obiekt klasy `GTools\Dpd\Api` budowany jak poniżej:
 ```php
 require_once __DIR__.'/vendor/autoload.php';
 
@@ -86,7 +86,7 @@ $login = 'testlogin';
 $password = 'testpassword';
 $fid = 12345;
 
-$api = new \T3ko\Dpd\Api($login, $password, $fid);
+$api = new \GTools\Dpd\Api($login, $password, $fid);
 ```
 
 Domyślnie biblioteka łączy się do endpointów produkcyjnych, ale dla większości usług API DPD udostępnia także endpointy testowe pozwalające na bezpieczne przetestowanie integracji własnego kodu z webserwisem. Aby włączyć ich użycie należy wywołać na obiekcie `Api` metodę `setSandboxMode`:
@@ -107,7 +107,7 @@ $api->setSandboxMode(false);
 
 Nadawanie paczkom numerów listów przewozowych odbywa się za pomocą metody `generatePackageNumbers` przyjmującej jako parametr obiekt typu `GeneratePackageNumbersRequest`:
 ```php
-use \T3ko\Dpd\Request\GeneratePackageNumbersRequest;
+use \GTools\Dpd\Request\GeneratePackageNumbersRequest;
 
 /** @var GeneratePackageNumbersRequest $request */
 $response = $api->generatePackageNumbers($request);
@@ -122,10 +122,10 @@ $multiplePackagesRequest = GeneratePackageNumbersRequest::fromPackages([$package
 #### Package
 Encja używana do budowania powyższego requestu to obiekt typu `Package`, zawierający konfigurację przesyłki. Do jego budowy potrzeba co najmniej trzech danych - obiektu nadawcy `Sender`, obiektu odbiorcy `Receiver` i jednej lub więcej instancji klasy `Parcel` wyrażających fizyczne paczki, które składają sie na przesyłkę. Przykładkowy kod tworzący obiekt `Package` może wyglądać jak niżej:
 ```php
-use T3ko\Dpd\Objects\Sender;
-use T3ko\Dpd\Objects\Receiver;
-use T3ko\Dpd\Objects\Parcel;
-use T3ko\Dpd\Objects\Package;
+use GTools\Dpd\Objects\Sender;
+use GTools\Dpd\Objects\Receiver;
+use GTools\Dpd\Objects\Parcel;
+use GTools\Dpd\Objects\Package;
 
 $sender = new Sender(12345, 501100100, 'Jan Kowalski', 'Puławska 1', '02566', 'Warszawa', 'PL');
 $receiver = new Receiver(605600600, 'Piotr Nowak', 'Kwiatowa 2', '60814', 'Poznań', 'PL');
@@ -197,7 +197,7 @@ $parcel->getWaybill(); //numer listu przewozowego, np. 0000092494467Q
 "Wydruk" etykiet odbywa się przy użyciu metody `generateLabels` do której przekazujemy obiekt typu `GenerateLabelsRequest`:
 
 ```php
-use \T3ko\Dpd\Request\GenerateLabelsRequest;
+use \GTools\Dpd\Request\GenerateLabelsRequest;
 
 /** @var GenerateLabelsRequest $request */
 $response = $api->generateLabels($request);
@@ -208,20 +208,20 @@ Obiekt żądania można skonstruować na trzy sposoby:
 
 - przy użyciu numerów listów przewozowych wygenerowanych w kroku 1.:
 ```php
-use \T3ko\Dpd\Request\GenerateLabelsRequest;
+use \GTools\Dpd\Request\GenerateLabelsRequest;
 
 $request = GenerateLabelsRequest::fromWaybills(['0000092494467Q']);
 ```
 - przy użyciu numerów identyfikatorów paczek nadanych przez DPD w kroku 1.:
 ```php
-use \T3ko\Dpd\Request\GenerateLabelsRequest;
+use \GTools\Dpd\Request\GenerateLabelsRequest;
 
 $parcelId = $parcel->getId();
 $request = GenerateLabelsRequest::fromParcelIds([$parcelId]);
 ```
 - lub, korzystając z pola `reference` paczek
 ```php
-use \T3ko\Dpd\Request\GenerateLabelsRequest;
+use \GTools\Dpd\Request\GenerateLabelsRequest;
 
 $parcelRef = $parcel->getReference();
 $request = GenerateLabelsRequest::fromReferences([$parcelRef]);
@@ -254,7 +254,7 @@ fclose($fp)
 Aby wygenerować protokół przekazania paczek kurierowi, używamy metody `generateProtocol`:
 
 ```php
-use \T3ko\Dpd\Request\GenerateProtocolRequest;
+use \GTools\Dpd\Request\GenerateProtocolRequest;
 
 /** @var GenerateProtocolRequest $request */
 $response = $api->generateProtocol($request);
@@ -264,7 +264,7 @@ Tworzenie obiektu żądania jest bliźniaczo podobne do przypadku generowania et
 korzystając z numerów listów przewozowych, identyfikatorów paczek lub referencji paczek:
 
 ```php
-use \T3ko\Dpd\Request\GenerateProtocolRequest;
+use \GTools\Dpd\Request\GenerateProtocolRequest;
 
 $request = GenerateProtocolRequest::fromWaybills([...]);
 $request = GenerateProtocolRequest::fromParcelIds([...]);
@@ -296,7 +296,7 @@ pamiętając, że w polu `$sender` powinny znajdować się dane podmiotu faktycz
 Poza tym, endpoint do zlecania odbioru akceptuje jedynie obiekty `Package`, w których zadeklarowano płatność przez stronę trzecią 
 (rozumianą jako stronę zlecającą odbiór):
 ```php
-$package->setPayerType(\T3ko\Dpd\Objects\Enum\PayerType::THIRD_PARTY());
+$package->setPayerType(\GTools\Dpd\Objects\Enum\PayerType::THIRD_PARTY());
 ```
 oraz podano numer FID tego płatnika (czyli w praktyce ten sam, którego używamy do łączenia się z API):
 ```php
@@ -306,7 +306,7 @@ $package->setThirdPartyFid(123);
 #### CollectionOrderRequest
 Tak skonstruowany `Package` służy jako parametr do generowania obiektu `CollectionOrderRequest`:
 ```php
-use \T3ko\Dpd\Request\CollectionOrderRequest;
+use \GTools\Dpd\Request\CollectionOrderRequest;
 
 $singlePackageRequest = CollectionOrderRequest::fromPackage($package);
 $multiplePackagesRequest = CollectionOrderRequest::fromPackages([$package1, $package2]);
@@ -314,7 +314,7 @@ $multiplePackagesRequest = CollectionOrderRequest::fromPackages([$package1, $pac
 
 dzięki któremu możemy wywołać metodę API zlecającą odbiór - `collectionOrder()`:
 ```php
-use \T3ko\Dpd\Request\CollectionOrderRequest;
+use \GTools\Dpd\Request\CollectionOrderRequest;
 
 /** @var CollectionOrderRequest $request */
 $response = $api->collectionOrder($request);
@@ -357,7 +357,7 @@ Składanie zlecenia odbioru przesyłki od osoby trzeciej w tym miejscu się koń
 Aby uzyskać informacje na temat konkretnej przesyłki możemy wykorzystać API `InfoService` poprzez metodę `getParcelTracking`:
 
 ```php
-use \T3ko\Dpd\Request\GetParcelTrackingRequest;
+use \GTools\Dpd\Request\GetParcelTrackingRequest;
 
 /** @var GetParcelTrackingRequest $request */
 $response = $api->getParcelTracking($request);
@@ -366,14 +366,14 @@ $response = $api->getParcelTracking($request);
 ### GetParcelTrackingRequest
 Obiekt żądania przekazywany do tej metody tworzymy przekazując numer listu przewozowego:
 ```php
-use \T3ko\Dpd\Request\GetParcelTrackingRequest;
+use \GTools\Dpd\Request\GetParcelTrackingRequest;
 
 $request = GetParcelTrackingRequest::fromWaybill(...);
 ```
 Opcjonalnie możemy wskazać czy chodzi nam o podgląd pełnej historii paczki czy tylko ostatnie zarejestrowane zdarzenie jej dotyczące:
 ```php
-use \T3ko\Dpd\Request\GetParcelTrackingRequest;
-use T3ko\Dpd\Objects\Enum\TrackingEventsCount;
+use \GTools\Dpd\Request\GetParcelTrackingRequest;
+use GTools\Dpd\Objects\Enum\TrackingEventsCount;
 
 $request = GetParcelTrackingRequest::fromWaybill('01234567890U', TrackingEventsCount::ALL()); 
 $request = GetParcelTrackingRequest::fromWaybill('01234567890U', TrackingEventsCount::ONLY_LAST());
@@ -383,7 +383,7 @@ przy czym domyślną wartością jest `TrackingEventsCount::ALL()` czyli pobiera
 ### GetParcelTrackingResponse
 W odpowiedzi uzyskujemy obiekt typu `GetParcelTrackingResponse`
 ```php
-use \T3ko\Dpd\Response\GetParcelTrackingResponse;
+use \GTools\Dpd\Response\GetParcelTrackingResponse;
 
 /** @var GetParcelTrackingResponse $response */
 $response = $api->getParcelTracking($request);

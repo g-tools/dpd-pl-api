@@ -1,8 +1,8 @@
 <?php
 
-namespace T3ko\DpdTests\Api;
+namespace GTools\DpdTests\Api;
 
-use T3ko\Dpd\Request\FindPostalCodeRequest;
+use GTools\Dpd\Request\FindPostalCodeRequest;
 
 class FindPostalCodeTest extends ApiIntegrationTestCase
 {

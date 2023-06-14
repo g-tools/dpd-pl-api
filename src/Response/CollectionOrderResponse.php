@@ -1,11 +1,11 @@
 <?php
 
-namespace T3ko\Dpd\Response;
+namespace GTools\Dpd\Response;
 
 
-use T3ko\Dpd\Objects\CollectionOrderedPackage;
-use T3ko\Dpd\Response\Deserializer\XmlCollectionOrderResponseDeserializer;
-use T3ko\Dpd\Soap\Types\ImportPackagesXV1Response;
+use GTools\Dpd\Objects\CollectionOrderedPackage;
+use GTools\Dpd\Response\Deserializer\XmlCollectionOrderResponseDeserializer;
+use GTools\Dpd\Soap\Types\ImportPackagesXV1Response;
 
 class CollectionOrderResponse
 {

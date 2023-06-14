@@ -1,6 +1,6 @@
 <?php
 
-namespace T3ko\Dpd\Soap\Types;
+namespace GTools\Dpd\Soap\Types;
 
 class DPDAppServiceException
 {
@@ -22,7 +22,7 @@ class DPDAppServiceException
      * @param string $message
      * @return $this
      */
-    public function setMessage(string $message) : \T3ko\Dpd\Soap\Types\DPDAppServiceException
+    public function setMessage(string $message) : \GTools\Dpd\Soap\Types\DPDAppServiceException
     {
         $this->message = $message;
         return $this;

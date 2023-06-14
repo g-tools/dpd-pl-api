@@ -1,13 +1,13 @@
 <?php
 
-namespace T3ko\DpdTests\Api;
+namespace GTools\DpdTests\Api;
 
-use T3ko\Dpd\Objects\Package;
-use T3ko\Dpd\Objects\Parcel;
-use T3ko\Dpd\Objects\Receiver;
-use T3ko\Dpd\Objects\Sender;
-use T3ko\Dpd\Request\GenerateLabelsRequest;
-use T3ko\Dpd\Request\GeneratePackageNumbersRequest;
+use GTools\Dpd\Objects\Package;
+use GTools\Dpd\Objects\Parcel;
+use GTools\Dpd\Objects\Receiver;
+use GTools\Dpd\Objects\Sender;
+use GTools\Dpd\Request\GenerateLabelsRequest;
+use GTools\Dpd\Request\GeneratePackageNumbersRequest;
 
 class GenerateLabelsTest extends ApiIntegrationTestCase
 {

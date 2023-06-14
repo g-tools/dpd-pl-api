@@ -1,9 +1,9 @@
 <?php
 
-namespace T3ko\Dpd\Response;
+namespace GTools\Dpd\Response;
 
-use T3ko\Dpd\Objects\CourierAvailability;
-use T3ko\Dpd\Soap\Types\GetCourierOrderAvailabilityV1Response;
+use GTools\Dpd\Objects\CourierAvailability;
+use GTools\Dpd\Soap\Types\GetCourierOrderAvailabilityV1Response;
 
 class GetCourierAvailabilityResponse
 {

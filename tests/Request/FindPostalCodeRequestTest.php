@@ -1,9 +1,9 @@
 <?php
 
-namespace T3ko\DpdTests\Request;
+namespace GTools\DpdTests\Request;
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Request\FindPostalCodeRequest;
+use GTools\Dpd\Request\FindPostalCodeRequest;
 
 class FindPostalCodeRequestTest extends TestCase
 {

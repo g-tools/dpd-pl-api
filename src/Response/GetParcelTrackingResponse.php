@@ -1,10 +1,10 @@
 <?php
 
-namespace T3ko\Dpd\Response;
+namespace GTools\Dpd\Response;
 
-use T3ko\Dpd\Objects\ParcelEvent;
-use T3ko\Dpd\Objects\ParcelEventAdditionalData;
-use T3ko\Dpd\Soap\Types\GetEventsForWaybillV1Response;
+use GTools\Dpd\Objects\ParcelEvent;
+use GTools\Dpd\Objects\ParcelEventAdditionalData;
+use GTools\Dpd\Soap\Types\GetEventsForWaybillV1Response;
 
 class GetParcelTrackingResponse
 {

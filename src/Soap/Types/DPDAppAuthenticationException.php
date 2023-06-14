@@ -1,6 +1,6 @@
 <?php
 
-namespace T3ko\Dpd\Soap\Types;
+namespace GTools\Dpd\Soap\Types;
 
 class DPDAppAuthenticationException
 {
@@ -27,7 +27,7 @@ class DPDAppAuthenticationException
      * @param string $login
      * @return $this
      */
-    public function setLogin(string $login) : \T3ko\Dpd\Soap\Types\DPDAppAuthenticationException
+    public function setLogin(string $login) : \GTools\Dpd\Soap\Types\DPDAppAuthenticationException
     {
         $this->login = $login;
         return $this;
@@ -45,7 +45,7 @@ class DPDAppAuthenticationException
      * @param string $message
      * @return $this
      */
-    public function setMessage(string $message) : \T3ko\Dpd\Soap\Types\DPDAppAuthenticationException
+    public function setMessage(string $message) : \GTools\Dpd\Soap\Types\DPDAppAuthenticationException
     {
         $this->message = $message;
         return $this;

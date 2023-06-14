@@ -1,10 +1,10 @@
 <?php
 
-namespace T3ko\DpdTests\Objects;
+namespace GTools\DpdTests\Objects;
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Objects\RegisteredPackage;
-use T3ko\Dpd\Objects\RegisteredParcel;
+use GTools\Dpd\Objects\RegisteredPackage;
+use GTools\Dpd\Objects\RegisteredParcel;
 
 class RegisteredPackageTest extends TestCase
 {

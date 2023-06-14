@@ -1,9 +1,9 @@
 <?php
 
-namespace T3ko\DpdTests\Objects\Enum;
+namespace GTools\DpdTests\Objects\Enum;
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Objects\Enum\FileType;
+use GTools\Dpd\Objects\Enum\FileType;
 
 class FileTypeTest extends TestCase
 {

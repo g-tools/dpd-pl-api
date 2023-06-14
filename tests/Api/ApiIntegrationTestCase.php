@@ -1,9 +1,9 @@
 <?php
 
-namespace T3ko\DpdTests\Api;
+namespace GTools\DpdTests\Api;
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Api;
+use GTools\Dpd\Api;
 
 abstract class ApiIntegrationTestCase extends TestCase
 {

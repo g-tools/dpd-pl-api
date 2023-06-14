@@ -1,13 +1,13 @@
 <?php
 
-namespace T3ko\Dpd\Response;
+namespace GTools\Dpd\Response;
 
-use T3ko\Dpd\Exception\ObjectException;
-use T3ko\Dpd\Objects\RegisteredPackage;
-use T3ko\Dpd\Objects\RegisteredParcel;
-use T3ko\Dpd\Soap\Types\GeneratePackagesNumbersV4Response;
-use T3ko\Dpd\Soap\Types\PackagePGRV2;
-use T3ko\Dpd\Soap\Types\ParcelPGRV2;
+use GTools\Dpd\Exception\ObjectException;
+use GTools\Dpd\Objects\RegisteredPackage;
+use GTools\Dpd\Objects\RegisteredParcel;
+use GTools\Dpd\Soap\Types\GeneratePackagesNumbersV4Response;
+use GTools\Dpd\Soap\Types\PackagePGRV2;
+use GTools\Dpd\Soap\Types\ParcelPGRV2;
 
 class GeneratePackageNumbersResponse
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace T3ko\DpdTests\Request;
+namespace GTools\DpdTests\Request;
 
 use PHPUnit\Framework\TestCase;
-use T3ko\Dpd\Objects\Enum\TrackingEventsCount;
-use T3ko\Dpd\Request\GetParcelTrackingRequest;
+use GTools\Dpd\Objects\Enum\TrackingEventsCount;
+use GTools\Dpd\Request\GetParcelTrackingRequest;
 
 class GetParcelTrackingRequestTest extends TestCase
 {

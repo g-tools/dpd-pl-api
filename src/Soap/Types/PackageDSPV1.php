@@ -1,6 +1,6 @@
 <?php
 
-namespace T3ko\Dpd\Soap\Types;
+namespace GTools\Dpd\Soap\Types;
 
 class PackageDSPV1
 {

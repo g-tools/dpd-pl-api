@@ -1,8 +1,8 @@
 <?php
 
-namespace T3ko\Dpd\Response;
+namespace GTools\Dpd\Response;
 
-use T3ko\Dpd\Soap\Types\FindPostalCodeV1Response;
+use GTools\Dpd\Soap\Types\FindPostalCodeV1Response;
 
 class FindPostalCodeResponse
 {
