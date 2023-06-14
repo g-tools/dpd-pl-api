@@ -106,4 +106,37 @@ class GenerateLabelsRequest
 
         return $request;
     }
+
+    /**
+     * @return FileType
+     */
+    public function getPageFormat(): FileType
+    {
+        return $this->pageFormat;
+    }
+
+    /**
+     * @param FileType $pageFormat
+     */
+    public function setPageFormat(FileType $pageFormat)
+    {
+        $this->pageFormat = $pageFormat;
+    }
+
+    /**
+     * @return PageSize
+     */
+    public function getPageSize(): PageSize
+    {
+        return $this->pageSize;
+    }
+
+    /**
+     * @param PageSize $pageSize
+     */
+    public function setPageSize(PageSize $pageSize)
+    {
+        $this->pageSize = $pageSize;
+    }
+
 }
