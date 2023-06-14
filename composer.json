@@ -1,6 +1,6 @@
 {
-  "name": "t3ko/dpd-pl-api-php",
-  "description": "PHP DPD API client",
+  "name": "g-tools/dpd-pl-api",
+  "description": "PHP DPD PL API client",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
@@ -29,12 +29,12 @@
   },
   "autoload": {
     "psr-4": {
-      "T3ko\\Dpd\\": "src/"
+      "GTools\\Dpd\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "T3ko\\DpdTests\\": "tests/"
+      "GTools\\DpdTests\\": "tests/"
     }
   },
   "scripts": {
