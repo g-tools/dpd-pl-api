@@ -2,6 +2,7 @@
 
 namespace T3ko\Dpd\Response;
 
+use T3ko\Dpd\Exception\ObjectException;
 use T3ko\Dpd\Objects\RegisteredPackage;
 use T3ko\Dpd\Objects\RegisteredParcel;
 use T3ko\Dpd\Soap\Types\GeneratePackagesNumbersV4Response;
@@ -25,14 +26,16 @@ class GeneratePackageNumbersResponse
     /**
      * @param GeneratePackagesNumbersV4Response $response
      *
-     * @throws \Exception
+     * @throws ObjectException
      *
      * @return GeneratePackageNumbersResponse
      */
     public static function from(GeneratePackagesNumbersV4Response $response)
     {
         if ('OK' !== $response->getReturn()->getStatus()) {
-            throw new \Exception($response->getReturn()->getStatus());
+            $e = new ObjectException($response->getReturn()->getStatus());
+            $e->setObject($response);
+            throw $e;
         }
 
         if (null !== $response->getReturn()->getPackages() && is_array($response->getReturn()->getPackages()->Package)) {
